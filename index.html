@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Time Compare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>World Time Compare <i class="fa-solid fa-globe"></i></h1>
+            <p id="local-live-clock" class="live-clock">Loading current time...</p>
+        </header>
+
+        <div class="compare-grid">
+            <div class="time-card">
+                <div class="card-header">
+                    <label><i class="fa-solid fa-location-dot"></i> Location 1</label>
+                    <input type="text" id="timezone1" class="tz-input" placeholder="Type city (e.g. Barishal, London)" list="city-options">
+                </div>
+                <div class="analog-clock">
+                    <div class="hand hour-hand" id="hour1"></div>
+                    <div class="hand min-hand" id="min1"></div>
+                    <div class="hand sec-hand" id="sec1"></div>
+                    <div class="center-dot"></div>
+                </div>
+                <div class="time-display">
+                    <h2 id="time1">00:00:00 AM</h2>
+                    <p id="date1" class="date-text">Loading date...</p>
+                    <p id="offset1" class="offset-text">UTC/GMT</p>
+                </div>
+            </div>
+
+            <div class="vs-badge">VS</div>
+
+            <div class="time-card">
+                <div class="card-header">
+                    <label><i class="fa-solid fa-location-dot"></i> Location 2</label>
+                    <input type="text" id="timezone2" class="tz-input" placeholder="Type city (e.g. New York)" list="city-options">
+                </div>
+                <div class="analog-clock">
+                    <div class="hand hour-hand" id="hour2"></div>
+                    <div class="hand min-hand" id="min2"></div>
+                    <div class="hand sec-hand" id="sec2"></div>
+                    <div class="center-dot"></div>
+                </div>
+                <div class="time-display">
+                    <h2 id="time2">00:00:00 AM</h2>
+                    <p id="date2" class="date-text">Loading date...</p>
+                    <p id="offset2" class="offset-text">UTC/GMT</p>
+                </div>
+            </div>
+        </div>
+
+        <datalist id="city-options"></datalist>
+
+        <div class="diff-container" id="time-diff">
+            Calculating time difference...
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

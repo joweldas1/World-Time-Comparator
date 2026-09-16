@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    background: #111111;
+    border: 1px solid #222222;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header h1 i {
+    color: #3b82f6;
+}
+
+.live-clock {
+    font-size: 15px;
+    color: #9ca3af;
+}
+
+.compare-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.time-card {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    transition: border-color 0.2s;
+}
+
+.time-card:hover {
+    border-color: #3b82f6;
+}
+
+.card-header {
+    margin-bottom: 15px;
+}
+
+.card-header label {
+    display: block;
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 8px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.tz-input {
+    width: 100%;
+    background: #27272a;
+    color: #fff;
+    border: 1px solid #3f3f46;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.tz-input:focus {
+    border-color: #3b82f6;
+}
+
+.analog-clock {
+    width: 130px;
+    height: 130px;
+    background: #111;
+    border: 4px solid #3b82f6;
+    border-radius: 50%;
+    margin: 15px auto;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 4px;
+}
+
+.hour-hand {
+    width: 4px;
+    height: 32px;
+    background: #ffffff;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.min-hand {
+    width: 3px;
+    height: 45px;
+    background: #9ca3af;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.sec-hand {
+    width: 2px;
+    height: 50px;
+    background: #ef4444;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.center-dot {
+    width: 10px;
+    height: 10px;
+    background: #ef4444;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time-display h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.date-text {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 4px;
+}
+
+.offset-text {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.vs-badge {
+    background: #27272a;
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 16px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3f3f46;
+    margin: 0 auto;
+}
+
+.diff-container {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    font-size: 15px;
+    color: #d1d5db;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .compare-grid {
+        grid-template-columns: 1fr;
+    }
+    .vs-badge {
+        margin: 10px auto;
+    }
+}
